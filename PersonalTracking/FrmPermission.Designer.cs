@@ -176,6 +176,7 @@
             this.Controls.Add(this.lblUserNo);
             this.Controls.Add(this.txtUserNo);
             this.Name = "FrmPermission";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracker - Permission";
             this.ResumeLayout(false);
             this.PerformLayout();
