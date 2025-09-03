@@ -28,12 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblDepartment = new System.Windows.Forms.Label();
+            this.txtDepartment = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lblDepartment
+            // 
+            this.lblDepartment.AutoSize = true;
+            this.lblDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartment.Location = new System.Drawing.Point(26, 36);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(109, 20);
+            this.lblDepartment.TabIndex = 0;
+            this.lblDepartment.Text = "Department:";
+            // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartment.Location = new System.Drawing.Point(151, 33);
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Size = new System.Drawing.Size(216, 26);
+            this.txtDepartment.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(30, 90);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(162, 50);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(205, 90);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(162, 50);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // FrmDepartment
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmDepartment";
+            this.ClientSize = new System.Drawing.Size(399, 165);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtDepartment);
+            this.Controls.Add(this.lblDepartment);
+            this.Name = "FrmDepartment";
+            this.Text = "Employee Tracking - Department";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblDepartment;
+        private System.Windows.Forms.TextBox txtDepartment;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClose;
     }
 }
