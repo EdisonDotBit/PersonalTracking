@@ -17,12 +17,67 @@ namespace PersonalTracking
             InitializeComponent();
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            FrmEmployeeList frmEmployeeList = new FrmEmployeeList();
+            this.Hide();
+            frmEmployeeList.ShowDialog();
+            this.Visible = true; 
+        }
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            FrmTaskList frmTaskList = new FrmTaskList();
+            this.Hide();
+            frmTaskList.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnSalary_Click(object sender, EventArgs e)
+        {
+            FrmSalaryList frnSalaryList = new FrmSalaryList();
+            this.Hide();
+            frnSalaryList.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnPermission_Click(object sender, EventArgs e)
+        {
+            FrmPermissionList frmPermissionList = new FrmPermissionList();
+            this.Hide();
+            frmPermissionList.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnDepartment_Click(object sender, EventArgs e)
+        {
+            FrmDepartmentList frmDepartmentList = new FrmDepartmentList();
+            this.Hide();
+            frmDepartmentList.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnPosition_Click(object sender, EventArgs e)
+        {
+            FrmPositionList frmPositionList = new FrmPositionList();
+            this.Hide();
+            frmPositionList.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            this.Hide();
+            frmLogin.ShowDialog();
+        }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
