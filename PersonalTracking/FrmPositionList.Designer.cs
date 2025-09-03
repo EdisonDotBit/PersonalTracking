@@ -44,7 +44,7 @@
             this.dgvPositionList.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvPositionList.Location = new System.Drawing.Point(0, 0);
             this.dgvPositionList.Name = "dgvPositionList";
-            this.dgvPositionList.Size = new System.Drawing.Size(659, 340);
+            this.dgvPositionList.Size = new System.Drawing.Size(661, 340);
             this.dgvPositionList.TabIndex = 0;
             // 
             // panel1
@@ -54,9 +54,9 @@
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 331);
+            this.panel1.Location = new System.Drawing.Point(0, 325);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(659, 100);
+            this.panel1.Size = new System.Drawing.Size(661, 100);
             this.panel1.TabIndex = 1;
             // 
             // btnClose
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 431);
+            this.ClientSize = new System.Drawing.Size(661, 425);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPositionList);
             this.Name = "FrmPositionList";
