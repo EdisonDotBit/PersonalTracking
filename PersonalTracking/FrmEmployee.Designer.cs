@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblUserNo = new System.Windows.Forms.Label();
-            this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.btnCheck = new System.Windows.Forms.Button();
+            this.chAdmin = new System.Windows.Forms.CheckBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.chAdmin = new System.Windows.Forms.CheckBox();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.lblUserNo = new System.Windows.Forms.Label();
+            this.txtUserNo = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
@@ -75,34 +75,16 @@
             this.panel1.Size = new System.Drawing.Size(881, 98);
             this.panel1.TabIndex = 0;
             // 
-            // lblUserNo
+            // chAdmin
             // 
-            this.lblUserNo.AutoSize = true;
-            this.lblUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserNo.Location = new System.Drawing.Point(15, 15);
-            this.lblUserNo.Name = "lblUserNo";
-            this.lblUserNo.Size = new System.Drawing.Size(119, 20);
-            this.lblUserNo.TabIndex = 0;
-            this.lblUserNo.Text = "User Number:";
-            // 
-            // txtUserNo
-            // 
-            this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserNo.Location = new System.Drawing.Point(140, 12);
-            this.txtUserNo.Name = "txtUserNo";
-            this.txtUserNo.Size = new System.Drawing.Size(175, 26);
-            this.txtUserNo.TabIndex = 1;
-            this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Location = new System.Drawing.Point(321, 12);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(115, 28);
-            this.btnCheck.TabIndex = 2;
-            this.btnCheck.Text = "CHECK";
-            this.btnCheck.UseVisualStyleBackColor = true;
+            this.chAdmin.AutoSize = true;
+            this.chAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chAdmin.Location = new System.Drawing.Point(742, 14);
+            this.chAdmin.Name = "chAdmin";
+            this.chAdmin.Size = new System.Drawing.Size(129, 24);
+            this.chAdmin.TabIndex = 5;
+            this.chAdmin.Text = "Verify Admin";
+            this.chAdmin.UseVisualStyleBackColor = true;
             // 
             // lblPassword
             // 
@@ -122,16 +104,34 @@
             this.txtPassword.Size = new System.Drawing.Size(175, 26);
             this.txtPassword.TabIndex = 4;
             // 
-            // chAdmin
+            // btnCheck
             // 
-            this.chAdmin.AutoSize = true;
-            this.chAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chAdmin.Location = new System.Drawing.Point(742, 14);
-            this.chAdmin.Name = "chAdmin";
-            this.chAdmin.Size = new System.Drawing.Size(129, 24);
-            this.chAdmin.TabIndex = 5;
-            this.chAdmin.Text = "Verify Admin";
-            this.chAdmin.UseVisualStyleBackColor = true;
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.Location = new System.Drawing.Point(321, 12);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(115, 28);
+            this.btnCheck.TabIndex = 2;
+            this.btnCheck.Text = "CHECK";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            // 
+            // lblUserNo
+            // 
+            this.lblUserNo.AutoSize = true;
+            this.lblUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNo.Location = new System.Drawing.Point(15, 15);
+            this.lblUserNo.Name = "lblUserNo";
+            this.lblUserNo.Size = new System.Drawing.Size(119, 20);
+            this.lblUserNo.TabIndex = 0;
+            this.lblUserNo.Text = "User Number:";
+            // 
+            // txtUserNo
+            // 
+            this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserNo.Location = new System.Drawing.Point(140, 12);
+            this.txtUserNo.Name = "txtUserNo";
+            this.txtUserNo.Size = new System.Drawing.Size(175, 26);
+            this.txtUserNo.TabIndex = 1;
+            this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
             // 
             // lblName
             // 
@@ -189,7 +189,7 @@
             // 
             // pbProfilePicture
             // 
-            this.pbProfilePicture.Location = new System.Drawing.Point(611, 117);
+            this.pbProfilePicture.Location = new System.Drawing.Point(547, 117);
             this.pbProfilePicture.Name = "pbProfilePicture";
             this.pbProfilePicture.Size = new System.Drawing.Size(258, 257);
             this.pbProfilePicture.TabIndex = 11;
@@ -199,7 +199,7 @@
             // 
             this.lblProfilePicture.AutoSize = true;
             this.lblProfilePicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfilePicture.Location = new System.Drawing.Point(684, 377);
+            this.lblProfilePicture.Location = new System.Drawing.Point(620, 377);
             this.lblProfilePicture.Name = "lblProfilePicture";
             this.lblProfilePicture.Size = new System.Drawing.Size(121, 20);
             this.lblProfilePicture.TabIndex = 8;
@@ -364,7 +364,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee Tracking - Employee";
+            this.Text = "Employee Tracker - Employee";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();

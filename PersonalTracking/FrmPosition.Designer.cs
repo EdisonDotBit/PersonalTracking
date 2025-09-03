@@ -107,7 +107,7 @@
             this.Controls.Add(this.lblPosition);
             this.Name = "FrmPosition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee Tracking - Position";
+            this.Text = "Employee Tracker - Position";
             this.Load += new System.EventHandler(this.FrmPosition_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

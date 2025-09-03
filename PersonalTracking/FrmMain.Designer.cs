@@ -168,7 +168,7 @@
             this.Controls.Add(this.btnEmployee);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee Tracking - Main Menu";
+            this.Text = "Employee Tracker - Main Menu";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
 

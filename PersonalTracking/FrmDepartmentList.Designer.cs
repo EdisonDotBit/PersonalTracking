@@ -44,7 +44,7 @@
             this.dgvDepartmentList.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvDepartmentList.Location = new System.Drawing.Point(0, 0);
             this.dgvDepartmentList.Name = "dgvDepartmentList";
-            this.dgvDepartmentList.Size = new System.Drawing.Size(653, 330);
+            this.dgvDepartmentList.Size = new System.Drawing.Size(806, 330);
             this.dgvDepartmentList.TabIndex = 0;
             // 
             // panel1
@@ -54,15 +54,15 @@
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 339);
+            this.panel1.Location = new System.Drawing.Point(0, 349);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 100);
+            this.panel1.Size = new System.Drawing.Size(806, 100);
             this.panel1.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(489, 20);
+            this.btnClose.Location = new System.Drawing.Point(641, 20);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(153, 68);
             this.btnClose.TabIndex = 3;
@@ -104,12 +104,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 439);
+            this.ClientSize = new System.Drawing.Size(806, 449);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvDepartmentList);
             this.Name = "FrmDepartmentList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee Tracking - Department List";
+            this.Text = "Employee Tracker - Department List";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartmentList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
