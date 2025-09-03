@@ -26,5 +26,21 @@ namespace PersonalTracking
         {
             this.Close();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            FrmEmployee frmEmployee = new FrmEmployee();
+            this.Hide();
+            frmEmployee.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FrmEmployee frmEmployee = new FrmEmployee();
+            this.Hide();
+            frmEmployee.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
