@@ -31,5 +31,21 @@ namespace PersonalTracking
         {
             pnlForAdmin.Hide();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            FrmTask frmTask = new FrmTask();
+            this.Hide();
+            frmTask.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FrmTask frmTask = new FrmTask();
+            this.Hide();
+            frmTask.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
