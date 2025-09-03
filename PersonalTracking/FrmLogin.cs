@@ -32,5 +32,12 @@ namespace PersonalTracking
         {
             Application.Exit();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain();
+            this.Hide();
+            frmMain.ShowDialog();
+        }
     }
 }
