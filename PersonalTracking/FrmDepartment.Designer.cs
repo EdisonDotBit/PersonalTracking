@@ -83,6 +83,7 @@
             this.Controls.Add(this.txtDepartment);
             this.Controls.Add(this.lblDepartment);
             this.Name = "FrmDepartment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracking - Department";
             this.ResumeLayout(false);
             this.PerformLayout();
