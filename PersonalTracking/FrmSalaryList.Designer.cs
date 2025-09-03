@@ -29,14 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvSalaryList = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.rbEqual = new System.Windows.Forms.RadioButton();
+            this.rbLess = new System.Windows.Forms.RadioButton();
+            this.rbMore = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbMonth = new System.Windows.Forms.ComboBox();
+            this.lblMonth = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
@@ -47,24 +53,18 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblUserNo = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.cmbMonth = new System.Windows.Forms.ComboBox();
-            this.lblMonth = new System.Windows.Forms.Label();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.lblSalary = new System.Windows.Forms.Label();
-            this.txtSalary = new System.Windows.Forms.TextBox();
-            this.gbFilter = new System.Windows.Forms.GroupBox();
-            this.rbMore = new System.Windows.Forms.RadioButton();
-            this.rbLess = new System.Windows.Forms.RadioButton();
-            this.rbEqual = new System.Windows.Forms.RadioButton();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.dgvSalaryList = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryList)).BeginInit();
-            this.pnlForAdmin.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gbFilter.SuspendLayout();
+            this.pnlForAdmin.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,67 +77,145 @@
             this.panel1.Size = new System.Drawing.Size(1076, 192);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 416);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1076, 116);
-            this.panel2.TabIndex = 1;
+            this.panel3.Controls.Add(this.btnClear);
+            this.panel3.Controls.Add(this.gbFilter);
+            this.panel3.Controls.Add(this.btnSearch);
+            this.panel3.Controls.Add(this.cmbMonth);
+            this.panel3.Controls.Add(this.lblMonth);
+            this.panel3.Controls.Add(this.lblYear);
+            this.panel3.Controls.Add(this.txtYear);
+            this.panel3.Controls.Add(this.lblSalary);
+            this.panel3.Controls.Add(this.txtSalary);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(396, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(680, 192);
+            this.panel3.TabIndex = 1;
             // 
-            // dgvSalaryList
+            // btnClear
             // 
-            this.dgvSalaryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalaryList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSalaryList.Location = new System.Drawing.Point(0, 192);
-            this.dgvSalaryList.Name = "dgvSalaryList";
-            this.dgvSalaryList.Size = new System.Drawing.Size(1076, 224);
-            this.dgvSalaryList.TabIndex = 2;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(524, 96);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(108, 33);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnClose
+            // gbFilter
             // 
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(907, 24);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(153, 68);
-            this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.gbFilter.Controls.Add(this.rbEqual);
+            this.gbFilter.Controls.Add(this.rbLess);
+            this.gbFilter.Controls.Add(this.rbMore);
+            this.gbFilter.Location = new System.Drawing.Point(405, 17);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(259, 58);
+            this.gbFilter.TabIndex = 18;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "SET FILTER";
             // 
-            // btnUpdate
+            // rbEqual
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(178, 24);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(153, 68);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.rbEqual.AutoSize = true;
+            this.rbEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEqual.Location = new System.Drawing.Point(151, 20);
+            this.rbEqual.Name = "rbEqual";
+            this.rbEqual.Size = new System.Drawing.Size(73, 24);
+            this.rbEqual.TabIndex = 2;
+            this.rbEqual.TabStop = true;
+            this.rbEqual.Text = "Equal";
+            this.rbEqual.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // rbLess
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(19, 24);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(153, 68);
-            this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.rbLess.AutoSize = true;
+            this.rbLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLess.Location = new System.Drawing.Point(80, 20);
+            this.rbLess.Name = "rbLess";
+            this.rbLess.Size = new System.Drawing.Size(65, 24);
+            this.rbLess.TabIndex = 1;
+            this.rbLess.TabStop = true;
+            this.rbLess.Text = "Less";
+            this.rbLess.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // rbMore
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(337, 24);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(153, 68);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.rbMore.AutoSize = true;
+            this.rbMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMore.Location = new System.Drawing.Point(7, 20);
+            this.rbMore.Name = "rbMore";
+            this.rbMore.Size = new System.Drawing.Size(67, 24);
+            this.rbMore.TabIndex = 0;
+            this.rbMore.TabStop = true;
+            this.rbMore.Text = "More";
+            this.rbMore.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(405, 96);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(113, 33);
+            this.btnSearch.TabIndex = 10;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // cmbMonth
+            // 
+            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMonth.FormattingEnabled = true;
+            this.cmbMonth.Location = new System.Drawing.Point(148, 99);
+            this.cmbMonth.Name = "cmbMonth";
+            this.cmbMonth.Size = new System.Drawing.Size(227, 28);
+            this.cmbMonth.TabIndex = 17;
+            // 
+            // lblMonth
+            // 
+            this.lblMonth.AutoSize = true;
+            this.lblMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonth.Location = new System.Drawing.Point(61, 102);
+            this.lblMonth.Name = "lblMonth";
+            this.lblMonth.Size = new System.Drawing.Size(64, 20);
+            this.lblMonth.TabIndex = 16;
+            this.lblMonth.Text = "Month:";
+            // 
+            // lblYear
+            // 
+            this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Location = new System.Drawing.Point(61, 61);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(52, 20);
+            this.lblYear.TabIndex = 14;
+            this.lblYear.Text = "Year:";
+            // 
+            // txtYear
+            // 
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear.Location = new System.Drawing.Point(148, 58);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(227, 26);
+            this.txtYear.TabIndex = 15;
+            // 
+            // lblSalary
+            // 
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.Location = new System.Drawing.Point(61, 20);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(64, 20);
+            this.lblSalary.TabIndex = 12;
+            this.lblSalary.Text = "Salary:";
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalary.Location = new System.Drawing.Point(148, 17);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(227, 26);
+            this.txtSalary.TabIndex = 13;
             // 
             // pnlForAdmin
             // 
@@ -156,23 +234,6 @@
             this.pnlForAdmin.Name = "pnlForAdmin";
             this.pnlForAdmin.Size = new System.Drawing.Size(396, 192);
             this.pnlForAdmin.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnClear);
-            this.panel3.Controls.Add(this.gbFilter);
-            this.panel3.Controls.Add(this.btnSearch);
-            this.panel3.Controls.Add(this.cmbMonth);
-            this.panel3.Controls.Add(this.lblMonth);
-            this.panel3.Controls.Add(this.lblYear);
-            this.panel3.Controls.Add(this.txtYear);
-            this.panel3.Controls.Add(this.lblSalary);
-            this.panel3.Controls.Add(this.txtSalary);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(396, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(680, 192);
-            this.panel3.TabIndex = 1;
             // 
             // cmbPosition
             // 
@@ -266,128 +327,69 @@
             this.txtUserNo.Size = new System.Drawing.Size(227, 26);
             this.txtUserNo.TabIndex = 11;
             // 
-            // cmbMonth
+            // panel2
             // 
-            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(148, 99);
-            this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(227, 28);
-            this.cmbMonth.TabIndex = 17;
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnNew);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 416);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1076, 116);
+            this.panel2.TabIndex = 1;
             // 
-            // lblMonth
+            // btnClose
             // 
-            this.lblMonth.AutoSize = true;
-            this.lblMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonth.Location = new System.Drawing.Point(23, 102);
-            this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(64, 20);
-            this.lblMonth.TabIndex = 16;
-            this.lblMonth.Text = "Month:";
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(907, 24);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(153, 68);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lblYear
+            // btnUpdate
             // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(23, 61);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(52, 20);
-            this.lblYear.TabIndex = 14;
-            this.lblYear.Text = "Year:";
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(178, 24);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(153, 68);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // txtYear
+            // btnNew
             // 
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.Location = new System.Drawing.Point(148, 58);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(227, 26);
-            this.txtYear.TabIndex = 15;
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(19, 24);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(153, 68);
+            this.btnNew.TabIndex = 5;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // lblSalary
+            // btnDelete
             // 
-            this.lblSalary.AutoSize = true;
-            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(23, 20);
-            this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(64, 20);
-            this.lblSalary.TabIndex = 12;
-            this.lblSalary.Text = "Salary:";
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(337, 24);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(153, 68);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // txtSalary
+            // dgvSalaryList
             // 
-            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(148, 17);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(227, 26);
-            this.txtSalary.TabIndex = 13;
-            // 
-            // gbFilter
-            // 
-            this.gbFilter.Controls.Add(this.rbEqual);
-            this.gbFilter.Controls.Add(this.rbLess);
-            this.gbFilter.Controls.Add(this.rbMore);
-            this.gbFilter.Location = new System.Drawing.Point(405, 17);
-            this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(259, 58);
-            this.gbFilter.TabIndex = 18;
-            this.gbFilter.TabStop = false;
-            this.gbFilter.Text = "SET FILTER";
-            // 
-            // rbMore
-            // 
-            this.rbMore.AutoSize = true;
-            this.rbMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMore.Location = new System.Drawing.Point(7, 20);
-            this.rbMore.Name = "rbMore";
-            this.rbMore.Size = new System.Drawing.Size(67, 24);
-            this.rbMore.TabIndex = 0;
-            this.rbMore.TabStop = true;
-            this.rbMore.Text = "More";
-            this.rbMore.UseVisualStyleBackColor = true;
-            // 
-            // rbLess
-            // 
-            this.rbLess.AutoSize = true;
-            this.rbLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLess.Location = new System.Drawing.Point(80, 20);
-            this.rbLess.Name = "rbLess";
-            this.rbLess.Size = new System.Drawing.Size(65, 24);
-            this.rbLess.TabIndex = 1;
-            this.rbLess.TabStop = true;
-            this.rbLess.Text = "Less";
-            this.rbLess.UseVisualStyleBackColor = true;
-            // 
-            // rbEqual
-            // 
-            this.rbEqual.AutoSize = true;
-            this.rbEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEqual.Location = new System.Drawing.Point(151, 20);
-            this.rbEqual.Name = "rbEqual";
-            this.rbEqual.Size = new System.Drawing.Size(73, 24);
-            this.rbEqual.TabIndex = 2;
-            this.rbEqual.TabStop = true;
-            this.rbEqual.Text = "Equal";
-            this.rbEqual.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(524, 96);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(108, 33);
-            this.btnClear.TabIndex = 11;
-            this.btnClear.Text = "CLEAR";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(405, 96);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(113, 33);
-            this.btnSearch.TabIndex = 10;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.dgvSalaryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalaryList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSalaryList.Location = new System.Drawing.Point(0, 192);
+            this.dgvSalaryList.Name = "dgvSalaryList";
+            this.dgvSalaryList.Size = new System.Drawing.Size(1076, 224);
+            this.dgvSalaryList.TabIndex = 2;
             // 
             // FrmSalaryList
             // 
@@ -401,14 +403,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracker - Salary List";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryList)).EndInit();
-            this.pnlForAdmin.ResumeLayout(false);
-            this.pnlForAdmin.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
+            this.pnlForAdmin.ResumeLayout(false);
+            this.pnlForAdmin.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,7 +422,7 @@
         private System.Windows.Forms.DataGridView dgvSalaryList;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel pnlForAdmin;
         private System.Windows.Forms.Panel panel3;

@@ -21,5 +21,21 @@ namespace PersonalTracking
         {
             this.Close();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            FrmSalary frmSalary = new FrmSalary();
+            this.Hide();
+            frmSalary.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FrmSalary frmSalary = new FrmSalary();
+            this.Hide();
+            frmSalary.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
