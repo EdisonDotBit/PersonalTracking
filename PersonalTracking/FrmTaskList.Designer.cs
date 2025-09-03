@@ -34,7 +34,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbTaskState = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gbDate = new System.Windows.Forms.GroupBox();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
             this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
             this.rbStartDate = new System.Windows.Forms.RadioButton();
             this.dpEnd = new System.Windows.Forms.DateTimePicker();
@@ -62,7 +62,7 @@
             this.dgvTaskList = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.gbDate.SuspendLayout();
+            this.gbFilter.SuspendLayout();
             this.pnlForAdmin.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).BeginInit();
@@ -84,7 +84,7 @@
             this.panel3.Controls.Add(this.btnSearch);
             this.panel3.Controls.Add(this.cmbTaskState);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.gbDate);
+            this.panel3.Controls.Add(this.gbFilter);
             this.panel3.Controls.Add(this.dpEnd);
             this.panel3.Controls.Add(this.dpStart);
             this.panel3.Controls.Add(this.lblFinishDate);
@@ -135,16 +135,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Task State:";
             // 
-            // gbDate
+            // gbFilter
             // 
-            this.gbDate.Controls.Add(this.rbDeliveryDate);
-            this.gbDate.Controls.Add(this.rbStartDate);
-            this.gbDate.Location = new System.Drawing.Point(365, 19);
-            this.gbDate.Name = "gbDate";
-            this.gbDate.Size = new System.Drawing.Size(227, 96);
-            this.gbDate.TabIndex = 7;
-            this.gbDate.TabStop = false;
-            this.gbDate.Text = "SET STATUS";
+            this.gbFilter.Controls.Add(this.rbDeliveryDate);
+            this.gbFilter.Controls.Add(this.rbStartDate);
+            this.gbFilter.Location = new System.Drawing.Point(365, 19);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(227, 96);
+            this.gbFilter.TabIndex = 7;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "SET FILTER";
             // 
             // rbDeliveryDate
             // 
@@ -417,8 +417,8 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.gbDate.ResumeLayout(false);
-            this.gbDate.PerformLayout();
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             this.pnlForAdmin.ResumeLayout(false);
             this.pnlForAdmin.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -454,7 +454,7 @@
         private System.Windows.Forms.Label lblFinishDate;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblTaskDate;
-        private System.Windows.Forms.GroupBox gbDate;
+        private System.Windows.Forms.GroupBox gbFilter;
         private System.Windows.Forms.RadioButton rbDeliveryDate;
         private System.Windows.Forms.RadioButton rbStartDate;
         private System.Windows.Forms.Button btnClear;
