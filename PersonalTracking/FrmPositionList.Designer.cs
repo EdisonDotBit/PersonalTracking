@@ -40,6 +40,7 @@
             // 
             // dgvPositionList
             // 
+            this.dgvPositionList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPositionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPositionList.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvPositionList.Location = new System.Drawing.Point(0, 0);
@@ -113,6 +114,7 @@
             this.Name = "FrmPositionList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracker - Position List";
+            this.Load += new System.EventHandler(this.FrmPositionList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPositionList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
