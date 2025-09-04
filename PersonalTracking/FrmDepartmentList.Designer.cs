@@ -40,6 +40,7 @@
             // 
             // dgvDepartmentList
             // 
+            this.dgvDepartmentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDepartmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDepartmentList.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvDepartmentList.Location = new System.Drawing.Point(0, 0);
@@ -113,6 +114,7 @@
             this.Name = "FrmDepartmentList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracker - Department List";
+            this.Load += new System.EventHandler(this.FrmDepartmentList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartmentList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
