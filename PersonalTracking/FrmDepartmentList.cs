@@ -31,8 +31,7 @@ namespace PersonalTracking
             this.Hide();
             frmDepartment.ShowDialog();
             this.Visible = true;
-            departmentList = DepartmentBLL.GetDepartments();
-            dgvDepartmentList.DataSource = departmentList;
+            FillGrid();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -43,12 +42,17 @@ namespace PersonalTracking
             this.Visible = true;
         }
 
+        void FillGrid()
+        {
+            departmentList = DepartmentBLL.GetDepartments();
+            dgvDepartmentList.DataSource = departmentList;
+        }
+
         List<DEPARTMENT> departmentList = new List<DEPARTMENT>();
 
         private void FrmDepartmentList_Load(object sender, EventArgs e)
         {
-            departmentList = DepartmentBLL.GetDepartments();
-            dgvDepartmentList.DataSource = departmentList;
+            FillGrid();
             dgvDepartmentList.Columns[0].Visible = false;
             dgvDepartmentList.Columns[1].HeaderText = "Department Name";
         }
