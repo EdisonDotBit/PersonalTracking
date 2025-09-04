@@ -41,8 +41,6 @@
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtImagePath = new System.Windows.Forms.TextBox();
-            this.pbProfilePicture = new System.Windows.Forms.PictureBox();
-            this.lblProfilePicture = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.lblSalary = new System.Windows.Forms.Label();
@@ -57,7 +55,10 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.gbProfileImage = new System.Windows.Forms.GroupBox();
+            this.pbProfilePicture = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.gbProfileImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,24 +187,6 @@
             this.txtImagePath.Name = "txtImagePath";
             this.txtImagePath.Size = new System.Drawing.Size(175, 26);
             this.txtImagePath.TabIndex = 6;
-            // 
-            // pbProfilePicture
-            // 
-            this.pbProfilePicture.Location = new System.Drawing.Point(547, 117);
-            this.pbProfilePicture.Name = "pbProfilePicture";
-            this.pbProfilePicture.Size = new System.Drawing.Size(258, 257);
-            this.pbProfilePicture.TabIndex = 11;
-            this.pbProfilePicture.TabStop = false;
-            // 
-            // lblProfilePicture
-            // 
-            this.lblProfilePicture.AutoSize = true;
-            this.lblProfilePicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfilePicture.Location = new System.Drawing.Point(620, 377);
-            this.lblProfilePicture.Name = "lblProfilePicture";
-            this.lblProfilePicture.Size = new System.Drawing.Size(121, 20);
-            this.lblProfilePicture.TabIndex = 8;
-            this.lblProfilePicture.Text = "Profile Picture";
             // 
             // openFileDialog1
             // 
@@ -335,11 +318,32 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // gbProfileImage
+            // 
+            this.gbProfileImage.Controls.Add(this.pbProfilePicture);
+            this.gbProfileImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbProfileImage.Location = new System.Drawing.Point(513, 117);
+            this.gbProfileImage.Name = "gbProfileImage";
+            this.gbProfileImage.Size = new System.Drawing.Size(323, 303);
+            this.gbProfileImage.TabIndex = 21;
+            this.gbProfileImage.TabStop = false;
+            this.gbProfileImage.Text = "Profile Picture";
+            // 
+            // pbProfilePicture
+            // 
+            this.pbProfilePicture.Location = new System.Drawing.Point(33, 31);
+            this.pbProfilePicture.Name = "pbProfilePicture";
+            this.pbProfilePicture.Size = new System.Drawing.Size(258, 257);
+            this.pbProfilePicture.TabIndex = 12;
+            this.pbProfilePicture.TabStop = false;
+            // 
             // FrmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(881, 675);
+            this.Controls.Add(this.gbProfileImage);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblAddress);
@@ -353,8 +357,6 @@
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.btnBrowse);
-            this.Controls.Add(this.lblProfilePicture);
-            this.Controls.Add(this.pbProfilePicture);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtImagePath);
             this.Controls.Add(this.lblSurname);
@@ -367,6 +369,7 @@
             this.Text = "Employee Tracker - Employee";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.gbProfileImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -388,8 +391,6 @@
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtImagePath;
-        private System.Windows.Forms.PictureBox pbProfilePicture;
-        private System.Windows.Forms.Label lblProfilePicture;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Label lblSalary;
@@ -404,5 +405,7 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.GroupBox gbProfileImage;
+        private System.Windows.Forms.PictureBox pbProfilePicture;
     }
 }

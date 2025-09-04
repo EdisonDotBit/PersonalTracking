@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dgvTask = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
@@ -50,8 +50,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,6 +64,15 @@
             this.panel1.Size = new System.Drawing.Size(299, 456);
             this.panel1.TabIndex = 0;
             // 
+            // dgvTask
+            // 
+            this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTask.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTask.Location = new System.Drawing.Point(0, 148);
+            this.dgvTask.Name = "dgvTask";
+            this.dgvTask.Size = new System.Drawing.Size(299, 308);
+            this.dgvTask.TabIndex = 1;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.cmbPosition);
@@ -75,15 +84,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(299, 148);
             this.panel2.TabIndex = 1;
-            // 
-            // dgvTask
-            // 
-            this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTask.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTask.Location = new System.Drawing.Point(0, 148);
-            this.dgvTask.Name = "dgvTask";
-            this.dgvTask.Size = new System.Drawing.Size(299, 308);
-            this.dgvTask.TabIndex = 1;
             // 
             // cmbPosition
             // 
@@ -261,6 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(800, 456);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
@@ -281,9 +282,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracker - Task";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
