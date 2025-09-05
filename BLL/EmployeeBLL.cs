@@ -21,6 +21,7 @@ namespace BLL
             EmployeeDTO employeeDTO = new EmployeeDTO();
             employeeDTO.Departments = DepartmentDAO.GetDepartments();
             employeeDTO.Positions = PositionDAO.GetPositions();
+            employeeDTO.Employees = EmployeeDAO.GetEmployees();
             return employeeDTO;
         }
 
