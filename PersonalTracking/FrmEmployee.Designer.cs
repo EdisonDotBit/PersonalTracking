@@ -80,11 +80,11 @@
             // 
             this.chAdmin.AutoSize = true;
             this.chAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chAdmin.Location = new System.Drawing.Point(742, 14);
+            this.chAdmin.Location = new System.Drawing.Point(737, 14);
             this.chAdmin.Name = "chAdmin";
-            this.chAdmin.Size = new System.Drawing.Size(129, 24);
+            this.chAdmin.Size = new System.Drawing.Size(132, 24);
             this.chAdmin.TabIndex = 5;
-            this.chAdmin.Text = "Verify Admin";
+            this.chAdmin.Text = "Set to Admin";
             this.chAdmin.UseVisualStyleBackColor = true;
             // 
             // lblPassword
@@ -114,6 +114,7 @@
             this.btnCheck.TabIndex = 2;
             this.btnCheck.Text = "CHECK";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // lblUserNo
             // 
@@ -201,6 +202,7 @@
             this.btnBrowse.TabIndex = 7;
             this.btnBrowse.Text = "BROWSE";
             this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // lblSalary
             // 
@@ -248,6 +250,7 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(175, 28);
             this.cmbDepartment.TabIndex = 12;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // lblDepartment
             // 
@@ -317,6 +320,7 @@
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // gbProfileImage
             // 
@@ -367,6 +371,7 @@
             this.Name = "FrmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracker - Employee";
+            this.Load += new System.EventHandler(this.FrmEmployee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.gbProfileImage.ResumeLayout(false);
